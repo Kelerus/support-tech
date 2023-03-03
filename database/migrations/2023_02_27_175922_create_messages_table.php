@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Ticket::class, 'ticket')->constrained()->nullable(false);
+            $table->foreignIdFor(Ticket::class, 'ticket')->constrained()->nullable(true);
             $table->foreignIdFor(User::class, 'user')->constrained()->nullable(false);
             $table->string('message', 2048);
             $table->json('files');

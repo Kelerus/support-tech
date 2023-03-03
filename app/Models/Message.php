@@ -9,6 +9,13 @@ class Message extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ticket',
+        'user',
+        'message',
+        'files',
+    ];
+
     protected $casts = [
         'files' => 'array',
     ];
